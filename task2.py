@@ -14,30 +14,41 @@
 # name1 = inpyt("Enter name1: ")
 # name2 = inpyt("Enter name2: ")
 
-""" if name1 <= name2:
-    print (name1, name2)
-else 
-    print (name2, name1)
+# Користувач вводить два імені
 
-if name1 <= name2:
-# print (name1, name2)
-       name1, name2 = name2, name1
-print (name2, name1)
- """
+name1 = input("Введіть перше ім'я: ")
+
+name2 = input("Введіть друге ім'я: ")
+
+# Порівняння в алфавітному порядку
+if name1.lower() < name2.lower():
+    print(name1, name2)
+else:
+    print(name2, name1)
 
 # Напишіть програму, яка виводить назви введених чисел. Користувач вводить ціле число. Якщо це число або 1 або 2 або 3, то виводиться повідомлення - назва числа, відповідно, One, Two, Three. В усіх інших випадках виводиться слово Unknown.
 
-namber = int(inpyt("Enter nymber: "))
+number = int(inpyt("Enter nymber: "))
 
-if number == 1:
-     name
+
+if num == 1:
   print("One")  
-elif number == 2:
+elif num == 2:
     print("Two")
-elif number == 3:
+elif num == 3:
     print("Three")
 else:
     print("Unknown")
+
+# або
+
+names = [input("Перше ім'я: "), input("Друге ім'я: ")]
+
+names.sort(key=str.lower)
+
+print("Імена в алфавітному порядку:", *names)
+
+
 # Користувач вводить дві різних англійські літери в окремих рядках. Напишіть програму, яка виводить повідомлення про місце розташування однієї літери відносно іншої у алфавіті.
 
 a = input().lower()
@@ -56,9 +67,11 @@ letter1 = inpyt("Enter letter1: "). lover()
 letter2 = inpyt("Enter letter2: "). lover()
 
 if letter1 <= letter2:
-     print ("First letter:", letter1, "Second letter:", letter2)
-     
+     print("First letter:", letter1, "Second letter:", letter2)
+else:
+     print("First letter:", letter2, "Second letter:", letter1)
 
+     
 
 # 5. Напишіть програму, в якій користувач вводить значення температури, і, якщо це значення менше або дорівнює 0 градусів Цельсія, необхідно вивести повідомлення A cold, isn’t it?. Якщо ж температура становить більше 0 і менше 10 градусів Цельсія повідомлення буде Cool., у інших випадках Nice weather we’re having..
 
@@ -70,4 +83,9 @@ elif temp < 10:
     print("Cool.")
 else:  
     print("Nice weather we're having.")
+
+    # variant2
+
+    t = float(input("Temperature °C: "))
+print("A cold, isn’t it?" if t <= 0 else "Cool." if t < 10 else "Nice weather we’re having.")
     
