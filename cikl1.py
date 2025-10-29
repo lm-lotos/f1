@@ -1,1 +1,0 @@
-for pet in pets:
